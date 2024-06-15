@@ -10,5 +10,5 @@ class Payment:
         self._payment_type = payment_input['type']
 
     def run(self):
-        response = PaymentType[self._payment_type].build().execute(self._payment_input)
+        response = PaymentType[self._payment_type].factory().execute(self._payment_input)
         return response
