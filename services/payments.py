@@ -17,7 +17,9 @@ class DebitPayment(Payment):
         print("Initialized 'DebitPayment' class")
 
     def execute(self, payment: dict) -> bool:
-        print(f"{payment.get("type")} payment processed. Price: {payment.get("value")}")
+        payment_type = payment.get("type")
+        payment_value = payment.get("value")
+        print(f"{payment_type} payment processed. Price: {payment_value}")
         return True
 
 
@@ -27,5 +29,7 @@ class CreditPayment(Payment):
         print("Initialized 'CreditPayment' class")
 
     def execute(self, payment: dict) -> bool:
-        print(f"{payment.get("type")} payment processed. Price: {payment.get("value")}")
+        payment_type = payment.get("type")
+        payment_value = payment.get("value")
+        print(f"{payment_type} payment processed. Price: {payment_value}")
         return True
